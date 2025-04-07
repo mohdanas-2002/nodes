@@ -31,5 +31,5 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t yourdockerhubusername/nodejs-demo-app .
-        docker push yourdockerhubusername/nodejs-demo-app
+        docker build -t amanuddinu4/nodejs-demo-app .
+        docker push amanuddinu4/nodejs-demo-app
