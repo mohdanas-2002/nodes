@@ -20,9 +20,9 @@ Create a Workflow File :<br>
         push:
         branches: [main]
         
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+   jobs:
+      build-and-deploy:
+        runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
