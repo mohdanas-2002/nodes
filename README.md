@@ -53,13 +53,12 @@ jobs:
 
 Prepare Your Dockerfile :<br> 
 
-FROM node:18
-WORKDIR /app
-COPY . .
-RUN npm install
-EXPOSE 3000
-CMD ["npm", "start"]
-<br>
+FROM node:18<br>
+WORKDIR /app<br>
+COPY . .<br>
+RUN npm install<br>
+EXPOSE 3000<br>
+CMD ["npm", "start"]<br>
 Configure GitHub Secrets :<br>
 Go to your GitHub repository settings → Secrets and variables → Actions<br>
 Add the following secrets:<br>
