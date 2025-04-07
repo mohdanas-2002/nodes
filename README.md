@@ -15,11 +15,11 @@ Create a Workflow File :<br>
  Create a file named main.yml : <br>
 
         name: CI/CD Pipeline
-
-on:
-  push:
-    branches: [main]
-
+    
+      on:
+        push:
+        branches: [main]
+        
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -59,6 +59,7 @@ COPY . .<br>
 RUN npm install<br>
 EXPOSE 3000<br>
 CMD ["npm", "start"]<br>
+<br>
 Configure GitHub Secrets :<br>
 Go to your GitHub repository settings → Secrets and variables → Actions<br>
 Add the following secrets:<br>
