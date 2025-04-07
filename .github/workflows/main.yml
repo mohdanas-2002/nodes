@@ -33,3 +33,5 @@ jobs:
       run: |
         docker build -t amanuddinu4/nodejs-demo-app .
         docker push amanuddinu4/nodejs-demo-app
+
+        
