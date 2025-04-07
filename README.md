@@ -1,18 +1,18 @@
-Objective :
-Automate the process of testing, building, and deploying a Node.js web app with GitHub Actions. Use DockerHub for deploying Docker images.
+Objective :<br>
+Automate the process of testing, building, and deploying a Node.js web app with GitHub Actions. Use DockerHub for deploying Docker images.<br>
 
-Pre-requisites :
- Create a GitHub repository and push your Node.js app code there.
- Ensure you have a DockerHub account to push your Docker images.
- A sample app to demonstrate the process.
- Create a  at the root of your project to containerize the application.
+Pre-requisites :<br>
+ Create a GitHub repository and push your Node.js app code there.<br>
+ Ensure you have a DockerHub account to push your Docker images.<br>
+ A sample app to demonstrate the process.<br>
+ Create a  at the root of your project to containerize the application.<br>
 
 
-Steps to Set Up the CI/CD Pipeline :
+Steps to Set Up the CI/CD Pipeline :<br>
 
-Create a Workflow File :
- Inside your GitHub repository, navigate to main.yml .
- Create a file named main.yml : 
+Create a Workflow File :<br>
+ Inside your GitHub repository, navigate to main.yml .<br>
+ Create a file named main.yml : <br>
 
         name: CI/CD Pipeline
 
@@ -49,8 +49,9 @@ jobs:
       run: |
         docker build -t amanuddinu4/nodejs-demo-app .
         docker push amanuddinu4/nodejs-demo-app
+        <br>
 
-Prepare Your Dockerfile : 
+Prepare Your Dockerfile :<br> 
 
 FROM node:18
 WORKDIR /app
@@ -58,15 +59,15 @@ COPY . .
 RUN npm install
 EXPOSE 3000
 CMD ["npm", "start"]
+<br>
+Configure GitHub Secrets :<br>
+Go to your GitHub repository settings → Secrets and variables → Actions<br>
+Add the following secrets:<br>
+ DOCKERHUB_TOKEN : DockerHub access token. <br> 
+ DOCKERHUB_USERNAME : Your DockerHub username. <br>
 
-Configure GitHub Secrets :
-Go to your GitHub repository settings → Secrets and variables → Actions
-Add the following secrets:
- DOCKERHUB_TOKEN : DockerHub access token.  
- DOCKERHUB_USERNAME : Your DockerHub username. 
-
-Test Your Pipeline :
-Commit and push your changes to the  branch.
-GitHub Actions will automatically trigger the workflow on every push to main.
+Test Your Pipeline :<br>
+Commit and push your changes to the  branch.<br>
+GitHub Actions will automatically trigger the workflow on every push to main.<br>
 
 
