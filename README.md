@@ -2,7 +2,7 @@ Objective :<br>
 Automate the process of testing, building, and deploying a Node.js web app with GitHub Actions. Use DockerHub for deploying Docker images.<br>
 
 Pre-requisites :<br>
- Create a GitHub repository and push your Node.js app code there.<br>
+ Create a GitHub  repository and push your Node.js app code there.<br>
  Ensure you have a DockerHub account to push your Docker images.<br>
  A sample app to demonstrate the process.<br>
  Create a  at the root of your project to containerize the application.<br>
