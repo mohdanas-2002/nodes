@@ -19,8 +19,7 @@ Create a Workflow File :<br>
       on:
         push:
         branches: [main]
-        
-   jobs:
+       jobs:
       build-and-deploy:
         runs-on: ubuntu-latest
 
